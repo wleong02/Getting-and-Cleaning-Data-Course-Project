@@ -48,4 +48,9 @@ summary <- tidydata %>%
             group_by(activity, subject) %>%
             summarize_all(mean, na.rm = TRUE)
 
+toexclude <- c("activity","subject","label")
+summary <- summary %>%
+  gather(measure, mean, -toexclude)
+summary$label <- NULL
+
 write.table(summary, "./Course Project/summarytidydata.txt", row.name = FALSE)
