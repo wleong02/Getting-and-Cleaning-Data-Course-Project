@@ -1,9 +1,3 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 **Getting and Cleaning Data**
 
 Course Project: Tidying Data
